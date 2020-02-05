@@ -1,4 +1,4 @@
 #install
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-add user to docker group, sudo usermod -aG $USER
+add user to docker group, sudo usermod -aG docker $USER

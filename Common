@@ -27,3 +27,7 @@ RUN echo "BLA BLA LBA" > /var/www/html/index.html
 CMD ["/usr/sbin/apache2ctl","-DFOREGROUND"]
 EXPOSE 80
 ###
+
+docker build -t test:v1
+#rebuild docker
+docker tag test:v1 test:v2

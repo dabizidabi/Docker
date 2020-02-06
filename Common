@@ -28,6 +28,11 @@ CMD ["/usr/sbin/apache2ctl","-DFOREGROUND"]
 EXPOSE 80
 ###
 
-docker build -t test:v1
-#rebuild docker
+docker build -t test:v1 .
+#copy docker file
 docker tag test:v1 test:v2
+
+#change docke container
+docker exec -it 23k43j45j23k /bin/bash
+#after changes commit docker
+docker commit c38204e238a0 test1:v3

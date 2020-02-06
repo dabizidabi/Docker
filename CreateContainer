@@ -1,0 +1,7 @@
+docker run -it --name Test -h Test ubuntu bash
+
+#in docker VM
+apt update
+apt-get install cowsay
+ln -s /usr/games/cowsay /usr/bin/cowsay
+cowsay "OLOLO"

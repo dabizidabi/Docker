@@ -5,3 +5,6 @@ apt update
 apt-get install cowsay
 ln -s /usr/games/cowsay /usr/bin/cowsay
 cowsay "OLOLO"
+
+#push in docker hub
+docker push dabizidabi/testkontainer:beta

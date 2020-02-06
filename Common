@@ -13,3 +13,17 @@ docker run -d -p 1234:8080 tomcat #run tomcat image daemon
 #remove images
 docker rmi tomcat
 doker rm 3kf3k543k2
+
+#create docker image (Dockerfile)
+
+FROM ubuntu:18.04
+
+RUN apt-get -y update
+RUN apt-get -y install apache2
+
+RUN echo "BLA BLA LBA" > /var/www/html/index.html
+
+
+CMD ["/usr/sbin/apache2ctl","-DFOREGROUND"]
+EXPOSE 80
+###

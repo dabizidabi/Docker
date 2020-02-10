@@ -44,6 +44,8 @@ docker run -h (image host name) --name (name docker) -it test1
 docker diff NameOfDockerImage #see changes in docker image
 docker logs NameOfDockerImage #logs in container
 
-docker rm -v $(docker ps -aq -f status=exited) #delete all stoped images
+docker rm -v $(docker ps -aq -f status=exited) #delete all stoped containers
+docker rmi $(docker images -q) --force #delete all images
+
 
 docker-compose up -d #build image and start it in background

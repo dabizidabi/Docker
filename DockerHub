@@ -6,6 +6,8 @@ docker commit c38204e238a0 test1:v3
 docker login
 docker push dabizidabi/mydocker:v1
 
+docker pull dabizidabi/mydocker:v1
+
 
 docker diff NameOfDockerImage #see changes in docker image
 docker logs NameOfDockerImage #logs in container

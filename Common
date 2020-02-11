@@ -4,6 +4,7 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 add user to docker group, sudo usermod -aG docker $USER
 
 docker ps / ps -a
+docker container ls -a #list containers
 docker start /stop nameimage #run docker image
 docker images #list images
 docker search tomcat #search tomcat image from docker hub

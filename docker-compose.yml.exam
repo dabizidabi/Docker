@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: postgres:12.1-alpine
+    container_name: postgres
+    ports:
+       - 8080:8080
+    volumes:
+       - ./pg_data:/var/libpostgresql/data/pgdata
+    environment:
+       POSTGRES_PASSWORD: 123
+       POSTGRES_DB: docker_test
+       PGDATA: /var/libpostgresql/data/pgdata
+    restart: always
+  app:
+     image: redmine:4.1.0-alpine
+     container_name: redmine
+     ports:
+        - 3000:3000
+     environment:
+        REDMINE_DB_POSTGRES: db
+        REDMINE_DB_PASSWORD: 123
+     restart: always
+     links:
+        - db

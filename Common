@@ -53,4 +53,5 @@ docker rm $(docker ps -a -q)
 
 docker-compose up -d #build image and start it in background
 
-
+docker build --network host .
+docker run -it --network host <image> <command>

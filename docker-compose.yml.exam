@@ -6,11 +6,11 @@ services:
     ports:
        - 8080:8080
     volumes:
-       - ./pg_data:/var/libpostgresql/data/pgdata
+       - postgres-data:/var/lib/postgresql/data/pgdata
     environment:
        POSTGRES_PASSWORD: 123
        POSTGRES_DB: docker_test
-       PGDATA: /var/libpostgresql/data/pgdata
+       PGDATA: /var/lib/postgresql/data/pgdata
     restart: always
   app:
      image: redmine:4.1.0-alpine
@@ -23,3 +23,6 @@ services:
      restart: always
      links:
         - db
+volumes:
+  postgres-data:
+    driver: local
